@@ -11,18 +11,8 @@
     <title>Jakarta</title>
 </head>
 <body>
-<%!
-    private static final String NAME_PARAMETER = "name";
-
-    private String formatName(String name) {
-        return name == null ? "" : name;
-    }
-%>
 <p>
-    Hello <%
-        String name = request.getParameter(NAME_PARAMETER);
-        out.println(formatName(name));
-    %>
+    Hello ${requestScope.name}
 </p>
 </body>
 </html>
