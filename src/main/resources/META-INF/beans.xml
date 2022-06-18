@@ -8,4 +8,12 @@
         <class>pl.training.cdi.di.TestEngine</class>
     </alternatives>
 
+    <interceptors>
+        <class>pl.training.cdi.interceptors.Stopper</class>
+    </interceptors>
+
+    <decorators>
+        <class>pl.training.cdi.decorators.SmartCar</class>
+    </decorators>
+
 </beans>

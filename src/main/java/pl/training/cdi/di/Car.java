@@ -5,9 +5,10 @@ import jakarta.annotation.PreDestroy;
 import jakarta.inject.Inject;
 import lombok.Setter;
 import lombok.extern.java.Log;
+import pl.training.cdi.interceptors.LogExecutionTime;
 
 @Log
-public class Car {
+public class Car implements Vehicle {
 
     /*@Setter(onMethod = @__({@Inject}))*/
     private Engine engine;
@@ -17,6 +18,8 @@ public class Car {
         this.engine = engine;
     }
 
+    @LogExecutionTime
+    @Override
     public void go() {
         engine.start();
         log.info("Driving...");
