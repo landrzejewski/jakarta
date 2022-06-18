@@ -13,7 +13,7 @@
 </head>
 <body>
 <p>
-    Hello ${requestScope.name}
+    Hello ${requestScope.name} (requestId: ${requestScope.id})
 </p>
 </body>
 </html>
