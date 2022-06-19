@@ -8,10 +8,10 @@ public class MenuView implements View {
 
     @Override
     public void render(Map<String, String> data) {
-        System.out.printf("Menu");
-        System.out.printf("1 - Dodaj");
-        System.out.printf("2 - Odejmij");
-        System.out.printf("3 - Wyjdź");
+        System.out.println("Menu");
+        System.out.println("1 - Dodaj");
+        System.out.println("2 - Odejmij");
+        System.out.println("3 - Wyjdź");
     }
 
 }
