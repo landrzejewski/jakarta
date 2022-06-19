@@ -9,19 +9,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
-public class MenuView implements View {
+public class ResultsView implements View {
 
     private final CalculatorController calculatorController;
-    private final Scanner scanner;
 
     @Override
     public void render(Map<String, String> data) {
-        System.out.println("Menu");
-        System.out.println("1 - Dodaj");
-        System.out.println("2 - Odejmij");
-        System.out.println("3 - Wyjdź");
-        var option = scanner.next();
-        calculatorController.select(option);
+        System.out.println("Result: %s".formatted(data.get("result")));
+        calculatorController.showMenu();
     }
 
 }

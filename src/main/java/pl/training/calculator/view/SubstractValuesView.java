@@ -9,19 +9,19 @@ import java.util.Map;
 import java.util.Scanner;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
-public class MenuView implements View {
+public class SubstractValuesView implements View {
 
     private final CalculatorController calculatorController;
     private final Scanner scanner;
 
     @Override
     public void render(Map<String, String> data) {
-        System.out.println("Menu");
-        System.out.println("1 - Dodaj");
-        System.out.println("2 - Odejmij");
-        System.out.println("3 - Wyjdź");
-        var option = scanner.next();
-        calculatorController.select(option);
+        System.out.println("Odejmowanie liczb");
+        System.out.println("Podaj pierwszą liczbę: ");
+        var firstNumber = scanner.nextBigDecimal();
+        System.out.println("Podaj drugą liczbę: ");
+        var secondNumber = scanner.nextBigDecimal();
+        calculatorController.substractValues(firstNumber, secondNumber);
     }
 
 }
